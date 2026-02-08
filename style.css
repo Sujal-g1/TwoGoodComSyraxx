@@ -13,7 +13,72 @@ html , body{
     height:100%;
     width: 100%;
 }
+body{
+    background-color:#F7F7F7 ;
+}
 
+#nav{
+    width:100%;
+    /* background-color: palegoldenrod; */
+    position: fixed;
+    z-index:6 ;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.navsvg{
+ /* background-color: red; */
+ height:82px;
+ overflow: hidden;
+}
+
+.navsvg svg{
+    display: block;
+}
+
+#nav .nav2{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+}
+ .nav2 .links a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#333;
+    font-size: 12px;
+    margin-right: 45px;
+    font-weight: 300;
+ }
+
+
+.nav2 .icons{
+background-color: white;
+border-radius: 20px;
+padding:8px 20px;
+display: flex;
+gap:50px;
+}
+
+.nav2 .icons i{
+ font-size: 18px;
+font-weight:100;
+color:#333;
+}
+
+#cursor{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    /* z-index: 3; */
+    transform: translate(-50% ,-50%) scale(0);
+
+}
 #page1{
     min-height: 100vh;
     /* background-color: red; */
@@ -80,7 +145,7 @@ html , body{
 
 #textsection p{
     text-align: center;
-    font-family: futura;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     color:rgb(61, 61, 61);
     font-weight: lighter;
@@ -114,7 +179,6 @@ html , body{
     scale: 0;
 }
 
-
 #page2{
     /* background-color: green; */
     height:100vh;
@@ -128,28 +192,167 @@ html , body{
 }
 
 #page2 .elem{
- height:100%;
+ height:100vh;
  width: 31%;
   /* background-color:  blue; */
 overflow: hidden;
+position: relative;
+/* display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column; */
 }
 
 #page2 .elem img{
-    height:100%;
+    height:100vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     scale:1.2;
+}
+
+#page2 .elem .dets{
+height:50px;
+width:70%;
+background-color:white;
+border-radius: 20px;
+z-index:5;
+position: absolute;
+top:50%;
+left:15%;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+#page2 .elem .dets .shop{
+font-weight: 100;
+color:rgb(87, 84, 84)
+}
+
+#page2 .elem .dets .home{
+    font-weight:600;
+}
+
+#page2 .elem .dets1{
+height:200px;
+width:70%;
+background-color: rgb(244 , 244 , 244);
+/* background-color: red; */
+border-radius: 20px;
+z-index:4;
+position: absolute;
+top:53%;
+left:15%;
+opacity: 0;
 }
 
 
 
 #page3{
-    height:100vh;
+    min-height:120vh;
     width: 100%;
-    /* background-color: saddlebrown ; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:70px;
+    flex-wrap: wrap;
+}
+
+.child12{
+   height:60vh;
+   width: 100%;
+   /* background-color: red;  */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px 20px;
+}
+
+ .child1{
+    height:45vh;
+    width:59%;
+    border:1px solid  #F7F7F7;
+}
+ .child1 h1{
+    font-size: 55px;
+    font-weight: 700;
+    font-family: futura;
+    text-transform: uppercase;
+    padding-top:50px;
+ }
+
+.child2{
+    height:45vh;
+    width: 40%;
+    /* border:1px solid  black; */
+    display: flex;
+    align-items: flex-start;
+    gap:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+     padding: 0 20px;
+    padding-top:50px;
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing:1px;
+} 
+
+.child2 a{
+    color:black;
+    font-size:13px;
+    text-decoration-line: underline;
+    text-underline-offset:20px;
 }
 
 
+#child5 , #child6{
+    height:92vh;
+    width: 40vw;
+    /* background-color: red; */
+    /* border:1px solid  black; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family:futura;
+    font-size: 10px;
+    letter-spacing:3px;
+    gap:50px;
+}
+
+#child3 , #child4{
+    height:85vh;
+    width: 40vw;
+    /* background-color: red; */
+    /* border:1px solid  black; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family:futura;
+    font-size: 10px;
+    letter-spacing:3px;
+    gap:50px;
+}
+
+.child img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding:10px 20px
+}
+
+#page4{
+     min-height: 100vh;
+    width: 100%;
+    background-color: blue;
+    margin-top:5px
+}
 
 @media (max-width:600px){
     #page1 h1{
